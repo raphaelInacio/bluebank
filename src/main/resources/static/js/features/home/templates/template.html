@@ -1,0 +1,32 @@
+
+
+<div class="container-fluid">
+	<div class="col-sm-12">
+		<h1 class="page-header">
+			Bem vindo {{vm.conta.cliente.nome}} <span class="label label-success">Saldo
+				Atual {{vm.conta.saldo | currency:'R$' }}</span>
+		</h1>
+
+		<h2 class="sub-header">Ultimas Transações</h2>
+		<div class="table-responsive">
+			<table class="table table-striped">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Tipo</th>
+						<th>Valor Operação</th>
+
+					</tr>
+				</thead>
+				<tbody>
+					<tr ng-repeat="operacao in vm.operacoes">
+						<td><span ng-bind="operacao.id"></span></td>
+						<td><span ng-bind="operacao.tipoOperacao"></span></td>
+						<td><span ng-bind="operacao.valor | currency:'R$'"></span></td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
