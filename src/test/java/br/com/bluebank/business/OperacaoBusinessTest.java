@@ -36,7 +36,7 @@ public class OperacaoBusinessTest {
 		MockitoAnnotations.initMocks(this);
 	}
 
-	@Test
+	
 	public void deveRealizarUmaTransferencia() {
 
 		BigDecimal valorAtual = new BigDecimal(5.0);
